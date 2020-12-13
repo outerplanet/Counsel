@@ -6,7 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!--FAVICONS-->
-	<!---->
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+	<link rel="manifest" href="img/favicons/site.webmanifest">
+	<link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="img/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="msapplication-config" content="img/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#000000">
 	<!--FONTS-->
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/4c1e25a77a.js" crossorigin="anonymous"></script>
@@ -17,7 +25,7 @@
 	<header class="header">
 		<div class="page-width">
 			<div class="header__wrapper">
-				<a class="header__logo" href="#home"><img class="header__logo-img" src="img/logo.png" alt="Logo"></a>
+				<a class="header__logo" href="/"><img class="header__logo-img" src="img/logo.png" alt="Logo"></a>
 				<div class="header__right">
 					<nav class="header__nav">
 						<ul class="header__nav-wrapper">
@@ -28,16 +36,16 @@
 							<li class="header__nav-item"><a class="header__nav-link" href="#contact">Contact</a></li>
 						</ul>
 					</nav>
-					<a class="header__language submenu__wrapper" href="javascript:void(0)">
-						<div class="header__language-button">
+					<div class="header__language">
+						<a class="header__language-button submenu__button" href="javascript:void(0)">
 							<img class="header__language-img" src="img/language-english.png" alt="Language">
 							<i class="header__language-icon fas fa-caret-down"></i>
-						</div>
+						</a>
 						<div class="header__language-submenu submenu">
-							<object><a class="header__language-submenu-button" href="index"><img class="header__language-submenu-img" src="img/language-english.png" alt="Lang">ENGLISH</a></object>
-							<object><a class="header__language-submenu-button" href="#"><img class="header__language-submenu-img" src="img/language-english.png" alt="Lang">RUSSIAN</a></object>
+							<a class="header__language-submenu-button" href="index"><img class="header__language-submenu-img" src="img/language-english.png" alt="Lang">ENGLISH</a>
+							<a class="header__language-submenu-button" href="#"><img class="header__language-submenu-img" src="img/language-english.png" alt="Lang">RUSSIAN</a>
 						</div>
-					</a>
+					</div>
 					<button class="header__hamburger hamburger__button"><i class="fas fa-bars"></i></button>
 				</div>
 			</div>
@@ -66,7 +74,7 @@
 		</div>
 	</footer>
 	<div class="hamburger">
-		<div class="hamburger__menu">
+		<div class="hamburger__wrapper">
 			<ul class="hamburger__nav">
 				<li class="hamburger__nav-item"><a class="hamburger__nav-link" href="#about">About</a></li>
 				<li class="hamburger__nav-item"><a class="hamburger__nav-link" href="#services">Services</a></li>
@@ -76,6 +84,6 @@
 			</ul>
 		</div>
 	</div>
-	<script src="script/main.js"></script>
+	<script src="script/script.js"></script>
 </body>
 </html>

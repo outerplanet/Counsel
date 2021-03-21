@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<!--FAVICONS-->
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
@@ -15,10 +14,8 @@
 	<meta name="msapplication-TileColor" content="#2b5797">
 	<meta name="msapplication-config" content="img/favicons/browserconfig.xml">
 	<meta name="theme-color" content="#000000">
-	<!--FONTS-->
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/4c1e25a77a.js" crossorigin="anonymous"></script>
-	<!---->
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -28,16 +25,14 @@
 				<a class="header__logo" href="/"><img class="header__logo-img" src="img/logo.png" alt="Logo"></a>
 				<div class="header__right">
 					<nav class="header__nav">
-						<ul class="header__nav-wrapper">
-							<li class="header__nav-item"><a class="header__nav-link" href="#about">About</a></li>
-							<li class="header__nav-item"><a class="header__nav-link" href="#services">Services</a></li>
-							<li class="header__nav-item"><a class="header__nav-link" href="#why-best">Why We Best</a></li>
-							<li class="header__nav-item"><a class="header__nav-link" href="#quote">Testimonials</a></li>
-							<li class="header__nav-item"><a class="header__nav-link" href="#contact">Contact</a></li>
-						</ul>
+						<a class="header__nav-link" href="#about">About</a>
+						<a class="header__nav-link" href="#services">Services</a>
+						<a class="header__nav-link" href="#why-best">Why We Best</a>
+						<a class="header__nav-link" href="#quote">Testimonials</a>
+						<a class="header__nav-link" href="#contact">Contact</a>
 					</nav>
 					<div class="header__language">
-						<a class="header__language-button submenu__button" href="javascript:void(0)">
+						<a class="header__language-button submenu__button" href="javascript:void(0)" aria-label="Toggle language menu">
 							<img class="header__language-img" src="img/language-english.png" alt="Language">
 							<i class="header__language-icon fas fa-caret-down"></i>
 						</a>
@@ -46,7 +41,7 @@
 							<a class="header__language-submenu-button" href="#"><img class="header__language-submenu-img" src="img/language-english.png" alt="Lang">RUSSIAN</a>
 						</div>
 					</div>
-					<button class="header__hamburger hamburger__button"><i class="fas fa-bars"></i></button>
+					<button class="header__hamburger hamburger__button" aria-label="Open navigation"><i class="fas fa-bars"></i></button>
 				</div>
 			</div>
 		</div>
@@ -75,15 +70,15 @@
 	</footer>
 	<div class="hamburger">
 		<div class="hamburger__wrapper">
-			<ul class="hamburger__nav">
-				<li class="hamburger__nav-item"><a class="hamburger__nav-link" href="#about">About</a></li>
-				<li class="hamburger__nav-item"><a class="hamburger__nav-link" href="#services">Services</a></li>
-				<li class="hamburger__nav-item"><a class="hamburger__nav-link" href="#why-best">Why We Best</a></li>
-				<li class="hamburger__nav-item"><a class="hamburger__nav-link" href="#quote">Testimonials</a></li>
-				<li class="hamburger__nav-item"><a class="hamburger__nav-link" href="#contact">Contact</a></li>
-			</ul>
+			<nav class="hamburger__nav">
+				<a class="hamburger__nav-link" href="#about">About</a>
+				<a class="hamburger__nav-link" href="#services">Services</a>
+				<a class="hamburger__nav-link" href="#why-best">Why We Best</a>
+				<a class="hamburger__nav-link" href="#quote">Testimonials</a>
+				<a class="hamburger__nav-link" href="#contact">Contact</a>
+			</nav>
 		</div>
 	</div>
-	<script src="script/script.js"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>

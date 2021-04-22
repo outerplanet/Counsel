@@ -3,7 +3,7 @@
 <head>
 	<title>Counsel</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
@@ -16,13 +16,16 @@
 	<meta name="theme-color" content="#000000">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/4c1e25a77a.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<script src="js/bundle.min.js" defer></script>
 </head>
 <body>
 	<header class="header">
 		<div class="page-width">
 			<div class="header__wrapper">
-				<a class="header__logo" href="/"><img class="header__logo-img" src="img/logo.png" alt="Logo"></a>
+				<a class="header__logo" href="/" aria-label="Homepage">
+					<img class="header__logo-img" src="img/logo.png" alt="Logo">
+				</a>
 				<div class="header__right">
 					<nav class="header__nav">
 						<a class="header__nav-link" href="#about">About</a>
@@ -36,35 +39,43 @@
 							<img class="header__language-img" src="img/language-english.png" alt="Language">
 							<i class="header__language-icon fas fa-caret-down"></i>
 						</a>
-						<div class="header__language-submenu submenu">
-							<a class="header__language-submenu-button" href="index"><img class="header__language-submenu-img" src="img/language-english.png" alt="Lang">ENGLISH</a>
-							<a class="header__language-submenu-button" href="#"><img class="header__language-submenu-img" src="img/language-english.png" alt="Lang">RUSSIAN</a>
+						<div class="header__language-submenu submenu__wrapper">
+							<a class="header__language-submenu-button" href="index">
+								<img class="header__language-submenu-img" src="img/language-english.png" alt="Lang">
+								<p class="header__language-submenu-text">ENGLISH</p>
+							</a>
+							<a class="header__language-submenu-button" href="#">
+								<img class="header__language-submenu-img" src="img/language-english.png" alt="Lang">
+								<p class="header__language-submenu-text">RUSSIAN</p>
+							</a>
 						</div>
 					</div>
-					<button class="header__hamburger hamburger__button" aria-label="Open navigation"><i class="fas fa-bars"></i></button>
+					<button class="header__hamburger hamburger__button" aria-label="Open navigation">
+						<i class="fas fa-bars"></i>
+					</button>
 				</div>
 			</div>
 		</div>
 	</header>
 	<main class="main">
 		<section class="home" id="home">
-			<div class="home__slider slider">
+			<div class="home__slider">
 				<div class="home__slider-buttons-wrapper page-width">
 					<div class="home__slider-buttons">
-						<a class="home__slider-prev slider__prev" href="javascript:void(0)">previous</a>
+						<a class="home__slider-prev slider__prev" href="javascript:void(0)" tabindex="-1">previous</a>
 						<p class="home__slider-divider">/</p>
-						<a class="home__slider-next slider__next" href="javascript:void(0)">Next</a>
+						<a class="home__slider-next slider__next" href="javascript:void(0)" tabindex="-1">Next</a>
 					</div>
 				</div>
-				<div class="home__slider-container">
+				<div class="home__slider-container slider">
 					<div class="home__slider-wrapper slider__wrapper">
 						<div class="home__slider-item1 home__slider-item slider__item">
 							<div class="page-width">
 								<div class="home__content">
 									<div class="home__text">
-										<h1 class="home__title">Consumer<br>Products<br>Consulting</h1>
+										<h1 class="home__title">Consumer <br> Products <br> Consulting</h1>
 										<div class="home__button-container">
-											<a class="home__button slider__link" href="#about">LEARN MORE</a>
+											<a class="home__button" href="#about">LEARN MORE</a>
 										</div>
 									</div>
 								</div>
@@ -74,9 +85,9 @@
 							<div class="page-width">
 								<div class="home__content">
 									<div class="home__text">
-										<h1 class="home__title">Lorem<br>Ipsum</h1>
+										<h1 class="home__title">Lorem <br> Ipsum</h1>
 										<div class="home__button-container">
-											<a class="home__button slider__link" href="#about">LEARN MORE</a>
+											<a class="home__button" href="#about">LEARN MORE</a>
 										</div>
 									</div>
 								</div>
@@ -86,9 +97,9 @@
 							<div class="page-width">
 								<div class="home__content">
 									<div class="home__text">
-										<h1 class="home__title">Ipsum<br>Lorem</h1>
+										<h1 class="home__title">Ipsum <br> Lorem</h1>
 										<div class="home__button-container">
-											<a class="home__button slider__link" href="#about">LEARN MORE</a>
+											<a class="home__button" href="#about">LEARN MORE</a>
 										</div>
 									</div>
 								</div>
@@ -102,10 +113,10 @@
 			<div class="page-width">
 				<div class="about__wrapper">
 					<div class="about__left">
-						<h2 class="about__title section-title">Take away the risk & you can do anything.</h2>
-						<p class="about__title-description section-title-description">Rapid solutions to the most complex business challenges with cooperative process-driven.</p>
-						<p class="about__text section-text">Integer blandit ultricies aliquam. Pellentesque quis dui varius, dapibus velit id, iaculis ipsum. Morbi ac eros feugiat, lacinia elit ut, elem turpis. Curabitur justo sapien, tempus sit amet rutrum eu, commodo eu lacus. Morbi in ligula nibh. Maecenas ut mi at odio hendrerit eleifend tempor. Justo sapien, tempus sit amet rutrum eu, commodo eu lacus. Morbi in ligula nibh. Maecenas ut mi at odio hendrerit eleifend tempor.</p>
-						<a class="about__button section-button" href="#">Take a Tour</a>
+						<h2 class="about__title section__title">Take away the risk & you can do anything.</h2>
+						<p class="about__title-description section__title-description">Rapid solutions to the most complex business challenges with cooperative process-driven.</p>
+						<p class="about__text section__text">Integer blandit ultricies aliquam. Pellentesque quis dui varius, dapibus velit id, iaculis ipsum. Morbi ac eros feugiat, lacinia elit ut, elem turpis. Curabitur justo sapien, tempus sit amet rutrum eu, commodo eu lacus. Morbi in ligula nibh. Maecenas ut mi at odio hendrerit eleifend tempor. Justo sapien, tempus sit amet rutrum eu, commodo eu lacus. Morbi in ligula nibh. Maecenas ut mi at odio hendrerit eleifend tempor.</p>
+						<a class="about__button section__button" href="#">Take a Tour</a>
 					</div>
 					<div class="about__right">
 						<img class="about__img" src="img/about-img.png" alt="About">
@@ -120,10 +131,10 @@
 						<img class="graph__img" src="img/graph.png" alt="Graph">
 					</div>
 					<div class="graph__right">
-						<h2 class="graph__title section-title">Constructing the best in class global assets.</h2>
-						<p class="graph__title-description section-title-description">Rapid solutions to the most complex business challenges with cooperative process-driven.</p>
-						<p class="graph__text section-text">Integer blandit ultricies aliquam. Pellentesque quis dui varius, dapibus velit id, iaculis ipsum. Morbi ac eros feugiat, lacinia elit ut, elementum turpis. Curabitur justo sapien, tempus sit amet rutrum eu, commodo eu lacus. Morbi in ligula nibh. Maecenas ut mi at odio hendrerit eleifend tempor. Integer blandit ultricies aliquam. Pellentesque quis dui varius, dapibus velit id, iaculis ipsum. Morbi ac eros feugiat, lacinia elit ut, elementum turpis. Curabitur justo sapien, tempus sit amet rutrum eu, commodo eu lacus. Morbi in ligula nibh. Maecenas ut mi at odio hendrerit eleifend tempor. Morbi ac eros feugiat, lacinia elit ut, elementum turpis. Curabitur justo sapien, tempus sit amet rutrum eu, commodo eu lacus. nibh. Maecenas ut mi at odio hendrerit eleifend tempor. Integer blandit ultricies Morbi in ligula nibh.</p>
-						<a class="graph__button section-button" href="#">Take a Tour</a>
+						<h2 class="graph__title section__title">Constructing the best in class global assets.</h2>
+						<p class="graph__title-description section__title-description">Rapid solutions to the most complex business challenges with cooperative process-driven.</p>
+						<p class="graph__text section__text">Integer blandit ultricies aliquam. Pellentesque quis dui varius, dapibus velit id, iaculis ipsum. Morbi ac eros feugiat, lacinia elit ut, elementum turpis. Curabitur justo sapien, tempus sit amet rutrum eu, commodo eu lacus. Morbi in ligula nibh. Maecenas ut mi at odio hendrerit eleifend tempor. Integer blandit ultricies aliquam. Pellentesque quis dui varius, dapibus velit id, iaculis ipsum. Morbi ac eros feugiat, lacinia elit ut, elementum turpis. Curabitur justo sapien, tempus sit amet rutrum eu, commodo eu lacus. Morbi in ligula nibh. Maecenas ut mi at odio hendrerit eleifend tempor. Morbi ac eros feugiat, lacinia elit ut, elementum turpis. Curabitur justo sapien, tempus sit amet rutrum eu, commodo eu lacus. nibh. Maecenas ut mi at odio hendrerit eleifend tempor. Integer blandit ultricies Morbi in ligula nibh.</p>
+						<a class="graph__button section__button" href="#">Take a Tour</a>
 					</div>
 				</div>
 			</div>
@@ -139,8 +150,8 @@
 		<section class="services" id="services">
 			<div class="page-width">
 				<div class="services__wrapper">
-					<h2 class="services__title section-title">Popular Services</h2>
-					<p class="services__title-description section-title-description">Rapid solutions to the most complex business challenges with cooperative process-driven.</p>
+					<h2 class="services__title section__title">Popular Services</h2>
+					<p class="services__title-description section__title-description">Rapid solutions to the most complex business challenges with cooperative process-driven.</p>
 					<div class="services__cards">
 						<div class="services__card">
 							<img class="services__card-img" src="img/services-img1.jpg" alt="Service">
@@ -189,14 +200,16 @@
 			<div class="page-width">
 				<div class="why-best__wrapper">
 					<div class="why-best__left">
-						<img class="why-best__left-img" src="img/why-best-img.png" alt="Why We Best">
-						<a class="why-best__left-button" href="javascript:void(0)" aria-label="Play video"><i class="fas fa-play"></i></a>
+						<img class="why-best__left-img" src="img/why-best-img.png" alt="Why we best">
+						<a class="why-best__left-button" href="javascript:void(0)" aria-label="Play video">
+							<i class="fas fa-play"></i>
+						</a>
 					</div>
 					<div class="why-best__right">
-						<h2 class="why-best__title section-title">Why we best Consulting office in london ?</h2>
-						<p class="why-best__title-description section-title-description">Rapid solutions to the most complex business challenges with cooperative process-driven.</p>
-						<p class="why-best__text section-text">Integer blandit ultricies aliquam. Pellentesque quis dui varius, dapibus velit id, iaculis ipsum. Morbi ac eros feugiat, lacinia elit ut, elem turpis.Curabitur justo sapien, tempus sit amet rutrum eu, commodo eu lacus. Morbi in ligula nibh. Maecenas ut mi at odio hendrerit eleifend tempor. Justo sapien, tempus sit amet rutrum eu, commodo eu lacus. Morbi in ligula nibh. Maecenas ut mi at odio hendrerit eleifend tempor.</p>
-						<a class="why-best__button section-button" href="#services">Our services</a>
+						<h2 class="why-best__title section__title">Why we best Consulting office in london ?</h2>
+						<p class="why-best__title-description section__title-description">Rapid solutions to the most complex business challenges with cooperative process-driven.</p>
+						<p class="why-best__text section__text">Integer blandit ultricies aliquam. Pellentesque quis dui varius, dapibus velit id, iaculis ipsum. Morbi ac eros feugiat, lacinia elit ut, elem turpis.Curabitur justo sapien, tempus sit amet rutrum eu, commodo eu lacus. Morbi in ligula nibh. Maecenas ut mi at odio hendrerit eleifend tempor. Justo sapien, tempus sit amet rutrum eu, commodo eu lacus. Morbi in ligula nibh. Maecenas ut mi at odio hendrerit eleifend tempor.</p>
+						<a class="why-best__button section__button" href="#services">Our services</a>
 					</div>
 				</div>
 			</div>
@@ -206,7 +219,7 @@
 				<div class="page-width">
 					<div class="quote__wrapper">
 						<p class="quote__icon">“</p>
-						<p class="quote__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit<br>Seddo eiusmod tempor incididunt ut labore Standard Dummy aliqua. Utenim adminim veniam, quis nostrud exercitation ullamco laboris nisi ut Unknown Printer The Commodo consequat. Duis aute irure dolor. Voluptate velit esse cillum dolore eu fugiat nullapariatur.</p>
+						<p class="quote__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit <br> Seddo eiusmod tempor incididunt ut labore Standard Dummy aliqua. Utenim adminim veniam, quis nostrud exercitation ullamco laboris nisi ut Unknown Printer The Commodo consequat. Duis aute irure dolor. Voluptate velit esse cillum dolore eu fugiat nullapariatur.</p>
 						<p class="quote__author">SAM ISBISTER</p>
 					</div>
 				</div>
@@ -215,11 +228,11 @@
 		<section class="contact" id="contact">
 			<div class="page-width">
 				<div class="contact__wrapper">
-					<h2 class="contact__title section-title">Contact with us</h2>
-					<p class="contact__title-description section-title-description">Rapid solutions to the most complex business challenges with cooperative process-driven.</p>
+					<h2 class="contact__title section__title">Contact with us</h2>
+					<p class="contact__title-description section__title-description">Rapid solutions to the most complex business challenges with cooperative process-driven.</p>
 					<div class="contact__cards">
 						<div class="contact__card">
-							<iframe class="contact__card-map" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d47473.55090085264!2d-74.020886!3d41.955253!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2skz!4v1616246788803!5m2!1sen!2skz"></iframe>
+							<div class="contact__card-map lazy-animation" data-lazy-iframe="class='contact__card-map-wrapper' title='Address' src='https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d47473.55090085264!2d-74.020886!3d41.955253!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2skz!4v1616246788803!5m2!1sen!2skz'"></div>
 							<div class="contact__card-article">
 								<h4 class="contact__card-title">Head Quarter</h4>
 								<div class="contact__card-info">
@@ -237,7 +250,7 @@
 							</div>
 						</div>
 						<div class="contact__card">
-							<iframe class="contact__card-map" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d47473.55090085264!2d-74.020886!3d41.955253!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2skz!4v1616246788803!5m2!1sen!2skz"></iframe>
+							<div class="contact__card-map lazy-animation" data-lazy-iframe="class='contact__card-map-wrapper' title='Address' src='https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d47473.55090085264!2d-74.020886!3d41.955253!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2skz!4v1616246788803!5m2!1sen!2skz'"></div>
 							<div class="contact__card-article">
 								<h4 class="contact__card-title">California office</h4>
 								<div class="contact__card-info">
@@ -255,7 +268,7 @@
 							</div>
 						</div>
 						<div class="contact__card">
-							<iframe class="contact__card-map" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d47473.55090085264!2d-74.020886!3d41.955253!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2skz!4v1616246788803!5m2!1sen!2skz"></iframe>
+							<div class="contact__card-map lazy-animation" data-lazy-iframe="class='contact__card-map-wrapper' title='Address' src='https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d47473.55090085264!2d-74.020886!3d41.955253!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2skz!4v1616246788803!5m2!1sen!2skz'"></div>
 							<div class="contact__card-article">
 								<h4 class="contact__card-title">London office</h4>
 								<div class="contact__card-info">
@@ -282,10 +295,18 @@
 			<div class="footer__wrapper">
 				<p class="footer__text">Copyright © Counsel</p>
 				<div class="footer__social">
-					<a class="footer__social-item" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-					<a class="footer__social-item" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-					<a class="footer__social-item" href="https://www.google.com/" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-					<a class="footer__social-item" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a class="footer__social-item" href="https://www.facebook.com/" target="_blank">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+					<a class="footer__social-item" href="https://twitter.com/" target="_blank">
+						<i class="fab fa-twitter"></i>
+					</a>
+					<a class="footer__social-item" href="https://www.google.com/" target="_blank">
+						<i class="fab fa-google-plus-g"></i>
+					</a>
+					<a class="footer__social-item" href="https://www.instagram.com/" target="_blank">
+						<i class="fab fa-instagram"></i>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -301,6 +322,5 @@
 			</nav>
 		</div>
 	</div>
-	<script src="js/script.js"></script>
 </body>
 </html>

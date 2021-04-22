@@ -3,7 +3,7 @@
 <head>
 	<title>404 Not Found</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
@@ -16,13 +16,16 @@
 	<meta name="theme-color" content="#000000">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/4c1e25a77a.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<script src="js/bundle.min.js" defer></script>
 </head>
 <body>
 	<header class="header">
 		<div class="page-width">
 			<div class="header__wrapper">
-				<a class="header__logo" href="/"><img class="header__logo-img" src="img/logo.png" alt="Logo"></a>
+				<a class="header__logo" href="/" aria-label="Homepage">
+					<img class="header__logo-img" src="img/logo.png" alt="Logo">
+				</a>
 				<div class="header__right">
 					<nav class="header__nav">
 						<a class="header__nav-link" href="#about">About</a>
@@ -36,12 +39,20 @@
 							<img class="header__language-img" src="img/language-english.png" alt="Language">
 							<i class="header__language-icon fas fa-caret-down"></i>
 						</a>
-						<div class="header__language-submenu submenu">
-							<a class="header__language-submenu-button" href="index"><img class="header__language-submenu-img" src="img/language-english.png" alt="Lang">ENGLISH</a>
-							<a class="header__language-submenu-button" href="#"><img class="header__language-submenu-img" src="img/language-english.png" alt="Lang">RUSSIAN</a>
+						<div class="header__language-submenu submenu__wrapper">
+							<a class="header__language-submenu-button" href="index">
+								<img class="header__language-submenu-img" src="img/language-english.png" alt="Lang">
+								<p class="header__language-submenu-text">ENGLISH</p>
+							</a>
+							<a class="header__language-submenu-button" href="#">
+								<img class="header__language-submenu-img" src="img/language-english.png" alt="Lang">
+								<p class="header__language-submenu-text">RUSSIAN</p>
+							</a>
 						</div>
 					</div>
-					<button class="header__hamburger hamburger__button" aria-label="Open navigation"><i class="fas fa-bars"></i></button>
+					<button class="header__hamburger hamburger__button" aria-label="Open navigation">
+						<i class="fas fa-bars"></i>
+					</button>
 				</div>
 			</div>
 		</div>
@@ -49,8 +60,9 @@
 	<section class="error-404">
 		<div class="error-404__header"></div>
 		<div class="page-width">
-			<div class="error-404__article">
-				<h2 class="error-404__title"><span class="error-404__number">404</span><br>Not Found</h2>
+			<div class="error-404__wrapper">
+				<p class="error-404__number">404</p>
+				<h2 class="error-404__title">Not Found</h2>
 				<p class="error-404__text">The requested page was not found on our server. It doesn't exist or it may have been removed.</p>
 			</div>
 		</div>
@@ -60,10 +72,18 @@
 			<div class="footer__wrapper">
 				<p class="footer__text">Copyright © Counsel</p>
 				<div class="footer__social">
-					<a class="footer__social-item" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-					<a class="footer__social-item" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-					<a class="footer__social-item" href="https://www.google.com/" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-					<a class="footer__social-item" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+					<a class="footer__social-item" href="https://www.facebook.com/" target="_blank">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+					<a class="footer__social-item" href="https://twitter.com/" target="_blank">
+						<i class="fab fa-twitter"></i>
+					</a>
+					<a class="footer__social-item" href="https://www.google.com/" target="_blank">
+						<i class="fab fa-google-plus-g"></i>
+					</a>
+					<a class="footer__social-item" href="https://www.instagram.com/" target="_blank">
+						<i class="fab fa-instagram"></i>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -79,6 +99,5 @@
 			</nav>
 		</div>
 	</div>
-	<script src="js/script.js"></script>
 </body>
 </html>
